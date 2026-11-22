@@ -1,0 +1,23 @@
+{
+  "name": "Lab assistant (AI Workbench)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "npm ci",
+  "forwardPorts": [5173, 4173],
+  "portsAttributes": {
+    "5173": { "label": "Vite dev server", "onAutoForward": "openBrowser" },
+    "4173": { "label": "Vite preview", "onAutoForward": "notify" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "files.eol": "\n"
+      }
+    }
+  },
+  "remoteUser": "node"
+}
