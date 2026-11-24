@@ -1,18 +1,32 @@
 {
   "name": "ai-workbench",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
+  "description": "Lab workbench UI: a chat assistant that checks each breadboard step with an overhead camera and a sensing breadboard. Demo data only.",
+  "engines": {
+    "node": ">=20.19"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run build"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "globals": "^16.0.0",
     "vite": "^7.3.8"
   }
 }
